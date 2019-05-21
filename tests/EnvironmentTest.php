@@ -21,4 +21,16 @@ class EnvironmentTest extends TestCase
 
         $this->assertSame('prod', env('APP_ENV'));
     }
+
+    /** @test */
+    public function it_returns_a_default_value()
+    {
+        $this->assertSame('local', env('APP_ENV', 'local'));
+    }
+
+    /** @test */
+    public function it_returns_null_if_there_is_no_default()
+    {
+        $this->assertNull(env('APP_ENV'));
+    }
 }
