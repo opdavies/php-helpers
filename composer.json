@@ -12,8 +12,8 @@
     "scripts": {
         "lint": "php-cs-fixer fix",
         "test": [
-            "composer run lint -- --dry-run",
-            "composer run test:unit"
+            "composer run test:unit",
+            "composer run lint -- --dry-run"
         ],
         "test:unit": "phpunit"
     },
