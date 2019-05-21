@@ -1,0 +1,38 @@
+{
+    "name": "opdavies/php-helpers",
+    "description": "Helper functions for when working with PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Davies",
+            "email": "oliver@oliverdavies.uk"
+        }
+    ],
+    "scripts": {
+        "lint": "php-cs-fixer fix",
+        "test": [
+            "composer run lint -- --dry-run",
+            "composer run test:unit"
+        ],
+        "test:unit": "phpunit"
+    },
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "phpunit/phpunit": "^8.1"
+    },
+    "autoload": {
+        "files": ["src/helpers.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Opdavies\\PhpHelpers\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
