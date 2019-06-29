@@ -22,7 +22,8 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.15",
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": "^7.5",
+        "symfony/var-dumper": "^4.3"
     },
     "autoload": {
         "files": ["src/helpers.php"]
